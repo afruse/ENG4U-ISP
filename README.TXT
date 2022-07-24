@@ -8,5 +8,5 @@ PROJECT TITLE: Classism RPG
 PURPOSE OF PROJECT: Creative ISP project on the power of higher class over lower class
 VERSION or DATE:
 HOW TO START THIS PROJECT:
-AUTHORS: tiger
+AUTHORS: Tiger
 USER INSTRUCTIONS:
