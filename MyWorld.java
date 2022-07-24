@@ -11,8 +11,8 @@ public class MyWorld extends World
     
     public MyWorld()
     {    
-        super(600, 400, 1);
+        super(800, 600, 1);
         MainC main = new MainC();
-        addObject(main, 300, 200);
+        addObject(main, 400, 300);
     }
 }
