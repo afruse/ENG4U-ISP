@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Outside extends World
 {
-    public static Door_in doorIn;
+    private static Door_in doorIn;
     public static HigherC higher;
     public static Label first;
     public static Label second;
@@ -36,7 +36,7 @@ public class Outside extends World
             first.setValue("???: Yes... and I");
             second.setValue(" have a job for you");
         }
-        if(Greenfoot.isKeyDown("space") || Greenfoot.isKeyDown("up")){
+        if(Greenfoot.isKeyDown("space")){
             textTimer.mark();
             flashBack();
         }

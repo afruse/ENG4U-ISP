@@ -10,7 +10,7 @@ public class MyWorld extends World
 {
     public static Bed bed;
     public static PC pc;
-    public static Door door;
+    private static Door door;
     public static arrow ar;
     public static Text text;
     public static MainC main;
