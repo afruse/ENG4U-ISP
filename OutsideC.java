@@ -19,12 +19,32 @@ public class OutsideC extends World
         addObject(Outside.higher, 680, 232);
         addObject(MyWorld.main, 680, 320);
         MainC.control = false;
+        Outside.first.setValue("You: Why would I ever work for you");
+        Outside.second.setValue("");
         addObject(MyWorld.text, 400, 400);
-        addObject(Outside.first, 230, 520);
-        addObject(Outside.second, 223, 560);
+        addObject(Outside.first, 345, 520);
+        addObject(Outside.second, 353, 560);
     }
     public void act(){
-        
+        if(Outside.textTimer.millisElapsed() > 4000){
+            Outside.first.setValue("Charles: I managed to erase my link to the jobs");
+            Outside.second.setValue("If you don't do this job I will expose you to police");
+        }
+        if(Outside.textTimer.millisElapsed() > 7000){
+            Outside.first.setValue("You: I don't believe you");
+            Outside.second.setValue("");
+        }
+        if(Outside.textTimer.millisElapsed() > 10000){
+            Outside.first.setValue("Charles: It's your choice if you are");
+            Outside.second.setValue("willing to risk it");
+        }
+        if(Outside.textTimer.millisElapsed() > 13000){
+            Outside.first.setValue("You: ...");
+            Outside.second.setValue("Alright I will do it, this is the last time");
+        }
+        if(Outside.textTimer.millisElapsed() > 16000){
+            //switch to another world
+        }
     }
     public void stepInside(){
         MyWorld world = new MyWorld();

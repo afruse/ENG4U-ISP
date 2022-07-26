@@ -45,7 +45,8 @@ public class Flashback extends World
             Outside.first.setValue("\" You heavily regretted working for him");
             Outside.second.setValue("committing crimes taking advantage of lower class\"");
         }
-        if(Outside.textTimer.millisElapsed() > 22000 && Greenfoot.isKeyDown("space")){
+        if(Outside.textTimer.millisElapsed() > 18000 && Greenfoot.isKeyDown("space")){
+            Outside.textTimer.mark();
             stepOutsideC();
         }
 /*            while(Outside.textTimer.millisElapsed() < 99999){
