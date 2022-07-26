@@ -8,11 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    public Bed bed;
-    public PC pc;
-    public Door door;
-    public arrow ar;
-    public Text text;
+    public static Bed bed;
+    public static PC pc;
+    public static Door door;
+    public static arrow ar;
+    public static Text text;
+    public static MainC main;
     public Label knock;
     public Label open;
     public MyWorld()
@@ -25,9 +26,10 @@ public class MyWorld extends World
         text = new Text();
         knock = new Label("There is knocking at the door....", 35);
         open = new Label("\"Can you please step outside?\"", 35);
-        MainC main = new MainC();
+        main = new MainC();
         addObject(bed, 76, 161);
         addObject(main, 83, 95);
+        MainC.control = true;
         addObject(pc, 450, 70);
         addObject(door, 680, 9);
         addObject(ar, 680, 100);

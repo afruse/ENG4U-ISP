@@ -8,14 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Outside extends World
 {
-
-    /**
-     * Constructor for objects of class Outside.
-     * 
-     */
+    public static Door_in doorIn;
     public Outside()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+    {
+        super(800, 600, 1);
+        doorIn = new Door_in();
+        addObject(doorIn, 680, 489);
+        doorIn.turn(180);
+        addObject(MyWorld.main, 680, 320);
+        MainC.control = false;
+        addObject(MyWorld.text, 400, 400);
+    }
+    public void stepInside(){
+        MyWorld world = new MyWorld();
+        Greenfoot.setWorld(world);
     }
 }

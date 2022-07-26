@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainC extends Actor
 {
+    public static boolean control;
     private SimpleTimer timer;
     private GreenfootImage[] idle;
     private GreenfootImage[] run;
@@ -51,19 +52,19 @@ public class MainC extends Actor
     }
     public void act()
     {
-        if(Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("up")){
+        if((Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("up")) && control){
             move(4);
             animeRun();
         }
-        if(Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("down")){
+        if((Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("down")) && control){
             move(-4);
             animeRun();
         }
-        if(Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")){
+        if((Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("left")) && control){
             turn(-4);
             animeRun();
         }
-        if(Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")){
+        if((Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")) && control){
             turn(4);
             animeRun();
         }
