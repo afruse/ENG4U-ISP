@@ -43,11 +43,15 @@ public class OutsideC extends World
             Outside.second.setValue("Alright I will do it, this is the last time");
         }
         if(Outside.textTimer.millisElapsed() > 16000){
-            //switch to another world
+            doParkour();
         }
     }
     public void stepInside(){
         MyWorld world = new MyWorld();
+        Greenfoot.setWorld(world);
+    }
+        public void doParkour(){
+        Parkour world = new Parkour();
         Greenfoot.setWorld(world);
     }
 }
