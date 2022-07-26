@@ -20,8 +20,8 @@ public class MyWorld extends World
         door = new Door();
         ar = new arrow();
         MainC main = new MainC();
-        addObject(main, 400, 300);
         addObject(bed, 76, 161);
+        addObject(main, 83, 95);
         addObject(pc, 450, 70);
         addObject(door, 680, 9);
         addObject(ar, 680, 100);
