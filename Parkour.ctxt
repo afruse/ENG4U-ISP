@@ -8,5 +8,5 @@ comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ pillSpawn()
 comment4.params=
-comment4.target=void\ pillSpawn2()
+comment4.target=void\ pillSpawn1()
 numComments=5

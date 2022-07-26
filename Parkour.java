@@ -23,17 +23,18 @@ public class Parkour extends World
         time1.mark();
     }
     public void act(){
-        if(time.millisElapsed() > 500){
+        if(time.millisElapsed() > 0){
             pillSpawn();
         }
-        if(time1.millisElapsed() > 2500){
-            pillSpawn2();
+        if(time.millisElapsed() > 2000){
+            pillSpawn1();
+            time1.mark();
         }
-        if(time.millisElapsed() > 6000){
+        if(time.millisElapsed() > 4000){
             removeObject(pill);
             time.mark();
         }
-        if(time1.millisElapsed() > 8000){
+        if(time1.millisElapsed() > 4000){
             removeObject(pill1);
             time1.mark();
         }
@@ -42,7 +43,7 @@ public class Parkour extends World
         int y = (600 + Greenfoot.getRandomNumber(200));
         addObject(pill, 860, y);
     }
-    public void pillSpawn2(){
+    public void pillSpawn1(){
         int y = (600 + Greenfoot.getRandomNumber(200));
         addObject(pill1, 860, y);
     }

@@ -19,6 +19,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         super(800, 600, 1);
+        setBackground("room.png");
         bed = new Bed();
         pc = new PC();
         door = new Door();

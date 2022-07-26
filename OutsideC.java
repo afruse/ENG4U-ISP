@@ -13,6 +13,7 @@ public class OutsideC extends World
     public OutsideC()
     {
         super(800, 600, 1);
+        setBackground("outside.png");
         doorIn = new Door_inC();
         addObject(doorIn, 680, 489);
         doorIn.turn(180);

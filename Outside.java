@@ -16,6 +16,7 @@ public class Outside extends World
     public Outside()
     {
         super(800, 600, 1);
+        setBackground("outside.png");
         doorIn = new Door_in();
         higher = new HigherC();
         first = new Label("You: Oh...", 35);
