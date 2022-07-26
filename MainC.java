@@ -34,7 +34,7 @@ public class MainC extends Actor
     int curIndex = 0;
     
     void animeIdle(){
-        if(timer.millisElapsed() > 170){
+        if(timer.millisElapsed() > 320){
             setImage(idle[curIndex]);
             curIndex++;
             curIndex %= 2;
