@@ -26,4 +26,8 @@ public class MyWorld extends World
         addObject(door, 680, 9);
         addObject(ar, 680, 100);
     }
+    public void stepOutside(){
+        Outside world = new Outside();
+        Greenfoot.setWorld(world);
+    }
 }
