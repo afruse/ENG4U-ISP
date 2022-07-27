@@ -51,7 +51,7 @@ public class Bedroom extends World
                 Outside.second.setValue("of Charles' mansion while you lead them\"");
             }
             if(time.millisElapsed() > 12000){
-                LastRun world = new LastRun();
+                Before world = new Before();
                 Greenfoot.setWorld(world);
             }
         }

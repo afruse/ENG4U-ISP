@@ -14,7 +14,6 @@ public class Flashback extends World
      * 
      */
     public HCprop hc = new HCprop();
-    private boolean butt = true; 
     public Flashback()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -49,16 +48,6 @@ public class Flashback extends World
             Outside.textTimer.mark();
             stepOutsideC();
         }
-/*            while(Outside.textTimer.millisElapsed() < 99999){
-                if(Greenfoot.isKeyDown("space") && Outside.textTimer.millisElapsed() > 500){
-                    Outside.first.setValue("\"That's why when Charles offered to pay");
-                    Outside.second.setValue("you for doing his dirty deeds you accepted\"");
-                    addObject(hc, 400, 200);
-                    if(Outside.textTimer.millisElapsed() > 19000){
-                        stepOutsideC();
-                    }
-                }
-            }*/
     }
     private void stepOutsideC(){
         OutsideC world = new OutsideC();

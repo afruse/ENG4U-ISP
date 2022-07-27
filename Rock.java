@@ -15,5 +15,10 @@ public class Rock extends Actor
     public void act()
     {
         move(-6);
+        LastRun world = (LastRun) getWorld();
+        if(isTouching(MainCPlat.class)){
+            world.arrested();
+            world.removeObject(this);
+        }
     }
 }
