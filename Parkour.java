@@ -8,43 +8,34 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Parkour extends World
 {
-    private static SimpleTimer time;
-    private static SimpleTimer time1;
-    public static Pillar pill;
-    public static Pillar pill1;
+    private LaserJump jump;
+    private LaserStay stay;
+    private SimpleTimer time;
+    private Gaurd gaurd;
+    private MainCPlat main;
     public Parkour()
     {    
         super(800, 600, 1, false);
-        pill = new Pillar();
-        pill1 = new Pillar();
+        setBackground("platform.png");
+        jump = new LaserJump();
+        stay = new LaserStay();
         time = new SimpleTimer();
-        time1 = new SimpleTimer();
+        gaurd = new Gaurd();
+        main = new MainCPlat();
+        addObject(main, 200, 500);
         time.mark();
-        time1.mark();
     }
     public void act(){
         if(time.millisElapsed() > 0){
-            pillSpawn();
+            addObject(jump, 900, 300);
         }
-        if(time.millisElapsed() > 2000){
-            pillSpawn1();
-            time1.mark();
+        if(time.millisElapsed() > 4500){
+            removeObject(jump);
+            addObject(stay, 900, 300);
         }
-        if(time.millisElapsed() > 4000){
-            removeObject(pill);
-            time.mark();
+        if(time.millisElapsed() > 9000){
+            removeObject(stay);
+            addObject(gaurd, 900, 500);
         }
-        if(time1.millisElapsed() > 4000){
-            removeObject(pill1);
-            time1.mark();
-        }
-    }
-    public void pillSpawn(){
-        int y = (600 + Greenfoot.getRandomNumber(200));
-        addObject(pill, 860, y);
-    }
-    public void pillSpawn1(){
-        int y = (600 + Greenfoot.getRandomNumber(200));
-        addObject(pill1, 860, y);
     }
 }
