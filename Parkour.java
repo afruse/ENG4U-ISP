@@ -12,7 +12,7 @@ public class Parkour extends World
     private LaserStay stay;
     private SimpleTimer time;
     private Gaurd gaurd;
-    private MainCPlat main;
+    public static MainCPlat main;
     public Parkour()
     {    
         super(800, 600, 1, false);
@@ -37,9 +37,10 @@ public class Parkour extends World
             removeObject(stay);
             addObject(gaurd, 900, 500);
         }
-//        if(time.millisElapsed() > 12000){
-//            
-//        }
+        if(time.millisElapsed() > 12000){
+            Bedroom world = new Bedroom();
+            Greenfoot.setWorld(world);
+        }
     }
     
     public void restart(){

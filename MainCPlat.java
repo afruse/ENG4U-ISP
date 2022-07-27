@@ -55,9 +55,9 @@ public class MainCPlat extends Actor
             setLocation(getX(), 500);
         }
         if(Greenfoot.isKeyDown("space")){
-            setLocation(getX(), getY() - 6); 
+            setLocation(getX(), getY() - 10); 
         }
-        setLocation(getX(), getY() + 4);
+        setLocation(getX(), getY() + 6);
         animeRun();
     }
 }

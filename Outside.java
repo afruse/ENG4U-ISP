@@ -37,7 +37,7 @@ public class Outside extends World
             first.setValue("???: Yes... and I");
             second.setValue(" have a job for you");
         }
-        if(Greenfoot.isKeyDown("space")){
+        if(textTimer.millisElapsed() > 3800){
             textTimer.mark();
             flashBack();
         }

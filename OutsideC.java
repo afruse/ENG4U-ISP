@@ -27,23 +27,43 @@ public class OutsideC extends World
         addObject(Outside.second, 353, 560);
     }
     public void act(){
-        if(Outside.textTimer.millisElapsed() > 4000){
+        if(Outside.textTimer.millisElapsed() > 3000){
             Outside.first.setValue("Charles: I managed to erase my link to the jobs");
             Outside.second.setValue("If you don't do this job I will expose you to police");
         }
-        if(Outside.textTimer.millisElapsed() > 7000){
+        if(Outside.textTimer.millisElapsed() > 6000){
             Outside.first.setValue("You: I don't believe you");
             Outside.second.setValue("");
         }
-        if(Outside.textTimer.millisElapsed() > 10000){
+        if(Outside.textTimer.millisElapsed() > 9000){
             Outside.first.setValue("Charles: It's your choice if you are");
             Outside.second.setValue("willing to risk it");
         }
-        if(Outside.textTimer.millisElapsed() > 13000){
+        if(Outside.textTimer.millisElapsed() > 12000){
             Outside.first.setValue("You: ...");
             Outside.second.setValue("Alright I will do it, this is the last time");
         }
-        if(Outside.textTimer.millisElapsed() > 16000){
+        if(Outside.textTimer.millisElapsed() > 15000){
+            Outside.first.setValue("Charles: I need you to steal from the Charity");
+            Outside.second.setValue("I established and bring me back the money");
+        }
+        if(Outside.textTimer.millisElapsed() > 17000){
+            Outside.first.setValue("You: why?");
+            Outside.second.setValue("");
+        }
+        if(Outside.textTimer.millisElapsed() > 20000){
+            Outside.first.setValue("Charles: Because I want to withdraw that money");
+            Outside.second.setValue("while keeping support for the election");
+        }
+        if(Outside.textTimer.millisElapsed() > 23000){
+            Outside.first.setValue("Charles: I made it easy for you to break in and");
+            Outside.second.setValue(" steal it, just avoid the lasers and the guard");
+        }
+        if(Outside.textTimer.millisElapsed() > 25000){
+            Outside.first.setValue("Charles: Here this potion can make you levitate");
+            Outside.second.setValue("");
+        }
+        if(Outside.textTimer.millisElapsed() > 26000){
             doParkour();
         }
     }
