@@ -51,7 +51,7 @@ public class OutsideC extends World
         MyWorld world = new MyWorld();
         Greenfoot.setWorld(world);
     }
-        public void doParkour(){
+    public void doParkour(){
         Parkour world = new Parkour();
         Greenfoot.setWorld(world);
     }

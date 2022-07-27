@@ -26,16 +26,24 @@ public class Parkour extends World
         time.mark();
     }
     public void act(){
-        if(time.millisElapsed() > 0){
-            addObject(jump, 900, 300);
+        if(time.millisElapsed() > 1000){
+            addObject(jump, 900, 500);
         }
         if(time.millisElapsed() > 4500){
             removeObject(jump);
-            addObject(stay, 900, 300);
+            addObject(stay, 900, 200);
         }
         if(time.millisElapsed() > 9000){
             removeObject(stay);
             addObject(gaurd, 900, 500);
         }
+//        if(time.millisElapsed() > 12000){
+//            
+//        }
+    }
+    
+    public void restart(){
+        Parkour world = new Parkour();
+        Greenfoot.setWorld(world);
     }
 }
